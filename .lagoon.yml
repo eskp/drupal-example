@@ -3,11 +3,6 @@ docker-compose-yaml: docker-compose.yml
 project: first-project
 
 tasks:
-  pre-rollout:
-    - run:
-        name: drush backup
-        command: drush -y ard --destination=/app/sites/default/files/private/pre-deploy.tar.gz
-        service: cli
 
   post-rollout:
     - run:
